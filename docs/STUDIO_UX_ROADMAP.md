@@ -34,7 +34,7 @@
 
 ---
 
-## Fase 1.6 — UI Exploration (validação da linguagem) · Phase 1.6 — UI Exploration (validating the language) → `v0.3.x`
+## Fase 1.6 — UI Exploration (validação da linguagem) · Phase 1.6 — UI Exploration (validating the language) → `v0.2.x`
 
 **PT** — *Objetivo:* **validar a linguagem visual antes de implementar componentes**, evitando o erro clássico de descobrir que a identidade não convence com metade da biblioteca já pronta. Fluxo maduro de produto: visão → linguagem → **exploração** → componentes. *Entrega:* o diretório `research/ui-exploration/` com dezenas de estudos visuais descritivos (wireframes em prosa, composições, variações de sidebar, cards, dashboards, tabelas, formulários, login), **todos derivados do `STUDIO_UX_VISUAL_DNA.md`** e nenhum definitivo — servem para calibrar e aprovar a linguagem com o Robson. Cada estudo é auditável pela `CERTIFICATION` e continua **sem valores finais** (ou com valores explicitamente marcados como provisórios/descartáveis). *Definição de Pronto:* linguagem visual validada e aprovada por decisão humana; os estudos que orientam a Fase 2 ficam registrados; os descartáveis saem (§9). Só depois desta validação a Fase 2 começa. *Nota:* esta fase foi proposta pelo Robson e inserida por evolução natural do roadmap (não reabre decisão da Fase 1).
 

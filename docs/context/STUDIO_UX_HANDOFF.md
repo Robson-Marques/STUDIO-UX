@@ -14,6 +14,9 @@
 
 **EN** — Never state a version number, a file/token/component name, or "what's already implemented" from memory. Run `git tag | sort -V | tail` and `git log --oneline -3` BEFORE talking about versions. Tags are immutable — never reuse. Confirm the next version number with Robson before tagging.
 
+> **PT — Convenção de versão vigente (decisão do Robson, 15/07/2026):** a `v0.2.0` foi publicada com um número que ficou errado, mas permanece (tag imutável). **Daqui em diante, só se varia o dígito final dentro da faixa `v0.2.1` … `v0.2.99`** — a próxima tag é `v0.2.1`, depois `v0.2.2`, etc. Toda a era de documentação (Fases 1.5–1.6) mora na linha `v0.2.x`. A mudança para `v1.0.0` continua reservada ao congelamento dos tokens (Fase 2).
+> **EN — Current version convention (Robson's decision, 2026-07-15):** `v0.2.0` shipped with a number that turned out wrong, but it stays (immutable tag). **From now on, only the final digit varies, within `v0.2.1` … `v0.2.99`** — the next tag is `v0.2.1`, then `v0.2.2`, etc. The whole documentation era (Phases 1.5–1.6) lives in the `v0.2.x` line. The move to `v1.0.0` remains reserved for freezing the tokens (Phase 2).
+
 ---
 
 ## ✅ Estado vigente · Current state

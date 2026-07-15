@@ -22,15 +22,17 @@
 
 **PT** — Antes de gerar qualquer tela, carregue e respeite, nesta ordem:
 
-1. `STUDIO_UX.md` — regra máxima (governança, política bilíngue, regra máxima de UX).
+1. `STUDIO_UX.md` — regra máxima (governança, SSOT §11, Boundary Check §12, tech-agnóstico §13, regra máxima de UX).
 2. `STUDIO_UX_PRINCIPLES.md` — os princípios numerados P1…P25. São a sua checklist.
-3. O produto certo: `desktop/STUDIO_UX_DESKTOP.md` **ou** `mobile/STUDIO_UX_MOBILE.md`. **Nunca os dois na mesma tela.**
-4. `tokens/STUDIO_UX_DESIGN_TOKENS.md` (+ COLOR, TYPOGRAPHY, SPACING) — de onde vêm todos os valores.
-5. `components/STUDIO_UX_COMPONENT_LIBRARY.md` — o que já existe para reutilizar.
-6. `patterns/STUDIO_UX_PATTERNS.md` — como resolver o fluxo (CRUD, busca, wizard…).
-7. `STUDIO_UX_LAYOUT_SYSTEM.md`, `STUDIO_UX_ACCESSIBILITY.md`, `STUDIO_UX_ANIMATIONS.md` conforme necessário.
+3. Linguagem visual: `STUDIO_UX_VISUAL_DNA.md` (personalidade e regras de gosto), `STUDIO_UX_GRAMMAR.md` (como a tela é composta), `STUDIO_UX_SURFACES.md` (superfícies/elevação), `STUDIO_UX_VISUAL_RHYTHM.md` (ritmo/espaço).
+4. O produto certo: `desktop/STUDIO_UX_DESKTOP.md` **ou** `mobile/STUDIO_UX_MOBILE.md`. **Nunca os dois na mesma tela.**
+5. `tokens/STUDIO_UX_DESIGN_TOKENS.md` (+ COLOR, TYPOGRAPHY, SPACING), `STUDIO_UX_THEMES.md`, `STUDIO_UX_ICONOGRAPHY.md` — de onde vêm todos os valores.
+6. `components/STUDIO_UX_COMPONENT_LIBRARY.md` — o que já existe para reutilizar.
+7. `patterns/STUDIO_UX_PATTERNS.md` — como resolver o fluxo; e o guia de domínio quando aplicável: `DASHBOARD`, `FORMS`, `TABLES`, `NAVIGATION`.
+8. `STUDIO_UX_LAYOUT_SYSTEM.md`, `STUDIO_UX_ACCESSIBILITY.md`, `STUDIO_UX_ANIMATIONS.md` conforme necessário.
+9. Ao final, **auto-audite** pela `STUDIO_UX_CERTIFICATION.md`. Regras secas e rápidas em `AI_RULES.md`.
 
-**EN** — Before generating any screen, load and honor, in this order: (1) `STUDIO_UX.md`; (2) `STUDIO_UX_PRINCIPLES.md` (your checklist); (3) the right product doc — Desktop OR Mobile, never both in one screen; (4) the token docs; (5) the component library (reuse first); (6) the patterns doc; (7) layout, accessibility and animation docs as needed.
+**EN** — Before generating any screen, load and honor, in this order: (1) `STUDIO_UX.md` (SSOT §11, Boundary Check §12, tech-agnostic §13); (2) `STUDIO_UX_PRINCIPLES.md` (your checklist); (3) visual language — `VISUAL_DNA`, `GRAMMAR`, `SURFACES`, `VISUAL_RHYTHM`; (4) the right product doc — Desktop OR Mobile, never both; (5) the token docs + `THEMES` + `ICONOGRAPHY`; (6) the component library (reuse first); (7) the patterns doc, plus the domain guide when relevant — `DASHBOARD`, `FORMS`, `TABLES`, `NAVIGATION`; (8) layout, accessibility, animation as needed; (9) finally, **self-audit** via `CERTIFICATION`. Quick, dry rules live in `AI_RULES.md`.
 
 ---
 
@@ -95,9 +97,9 @@
 
 ## 6. Nota sobre a fase atual · Note on the current phase
 
-**PT** — Na versão `v0.1.0`, o Studio UX é **só documentação** — tokens, componentes e telas ainda não foram implementados. Se te pedirem para "usar o componente X" ou "o token Y" antes de eles existirem, avise que estamos na fase de fundação documental e ofereça construir a partir das *especificações* documentadas (o catálogo e a arquitetura de tokens já definem nome, propósito e regras). Ver `STUDIO_UX_ROADMAP.md`.
+**PT** — Na versão `v0.2.0` (Fase 1.5 concluída), o Studio UX é **só documentação** — a linguagem visual está definida como *caráter e regras*, mas tokens, componentes e telas ainda não foram implementados e **nenhum valor estético final** foi decidido (isso é a Fase 2). Se te pedirem para "usar o componente X" ou "o token Y" antes de eles existirem, avise a fase e ofereça construir a partir das *especificações* documentadas. Se faltar qualquer informação, **não invente**: crie uma proposta e aguarde aprovação (`AI_RULES.md`, `STUDIO_UX.md` §12). Ver `STUDIO_UX_ROADMAP.md`.
 
-**EN** — In `v0.1.0`, Studio UX is **documentation only** — tokens, components and screens are not implemented yet. If asked to "use component X" or "token Y" before they exist, note that we are in the documentation-foundation phase and offer to build from the documented *specifications* (the catalog and token architecture already define name, purpose and rules). See `STUDIO_UX_ROADMAP.md`.
+**EN** — In `v0.2.0` (Phase 1.5 done), Studio UX is **documentation only** — the visual language is defined as *character and rules*, but tokens, components and screens are not implemented yet and **no final aesthetic value** has been decided (that's Phase 2). If asked to "use component X" or "token Y" before they exist, note the phase and offer to build from the documented *specifications*. If any information is missing, **do not invent**: create a proposal and wait for approval (`AI_RULES.md`, `STUDIO_UX.md` §12). See `STUDIO_UX_ROADMAP.md`.
 
 ---
 

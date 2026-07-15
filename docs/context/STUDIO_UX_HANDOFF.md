@@ -4,7 +4,7 @@
 >
 > **EN** — This file exists because an assistant's memory is compacted in long sessions and it loses the thread (especially tracking versions). **The source of truth is git + `CHANGELOG.md`, NEVER memory.** Every new session starts by reading: (1) `git log --oneline -3` and `git tag`, (2) this file, (3) `STUDIO_UX.md`, (4) the current front's doc.
 
-> Última atualização · Last updated: 2026-07-15.
+> Última atualização · Last updated: 2026-07-15 (Fase 1.5 concluída · Phase 1.5 done).
 
 ---
 
@@ -18,29 +18,32 @@
 
 ## ✅ Estado vigente · Current state
 
-- **Versão / Version:** `v0.1.0` (fundação documental / documentation foundation).
-- **Fase / Phase:** Fase 1 concluída em conteúdo — só documentação. Nenhum código, token final, componente ou tela. / Phase 1 complete in content — documentation only. No code, final tokens, components or screens.
+- **Versão / Version:** `v0.2.0` (Fase 1.5 — linguagem visual / visual language).
+- **Fase / Phase:** Fases 1 e 1.5 concluídas em conteúdo — só documentação. Nenhum código, token final, componente ou tela; **nenhum valor estético final** decidido. / Phases 1 and 1.5 complete in content — documentation only. No code, final tokens, components or screens; **no final aesthetic value** decided.
 - **Idioma / Language:** Bilíngue PT-BR + EN, lado a lado por seção, em toda doc normativa. / Bilingual, side by side per section.
 
 ### Documentos entregues · Delivered documents
 
 | Grupo · Group | Arquivos · Files | Status |
 |---|---|---|
-| Governança · Governance | `STUDIO_UX.md`, `README.md`, `CHANGELOG.md` | ✅ |
-| Conceito · Concept | `STUDIO_UX_VISION.md`, `STUDIO_UX_PHILOSOPHY.md`, `STUDIO_UX_PRINCIPLES.md`, `context/STUDIO_UX_AI_CONTEXT.md`, `context/STUDIO_UX_HANDOFF.md` | ✅ |
+| Governança · Governance | `STUDIO_UX.md` (v1.1.0: +SSOT §11, +Boundary Check §12, +10 anos §13), `README.md`, `CHANGELOG.md` | ✅ |
+| Conceito · Concept | `STUDIO_UX_VISION.md`, `STUDIO_UX_PHILOSOPHY.md`, `STUDIO_UX_PRINCIPLES.md`, `context/STUDIO_UX_AI_CONTEXT.md`, `context/AI_RULES.md`, `context/STUDIO_UX_HANDOFF.md` | ✅ |
+| Linguagem visual · Visual language | `STUDIO_UX_VISUAL_DNA.md`, `STUDIO_UX_GRAMMAR.md` (ADR-001), `STUDIO_UX_SURFACES.md`, `STUDIO_UX_VISUAL_RHYTHM.md`, `research/REFERENCE_DNA.md` | ✅ |
 | Tokens | `tokens/STUDIO_UX_DESIGN_TOKENS.md`, `COLOR_SYSTEM`, `TYPOGRAPHY`, `SPACING` | ✅ |
 | Fundação visual · Visual foundation | `STUDIO_UX_THEMES.md`, `STUDIO_UX_ICONOGRAPHY.md`, `STUDIO_UX_ANIMATIONS.md` | ✅ |
 | Estrutura · Structure | `layouts/STUDIO_UX_LAYOUT_SYSTEM.md`, `components/STUDIO_UX_COMPONENT_LIBRARY.md`, `patterns/STUDIO_UX_PATTERNS.md`, `STUDIO_UX_ACCESSIBILITY.md` | ✅ |
+| Composição · Composition | `STUDIO_UX_DASHBOARD.md`, `STUDIO_UX_FORMS.md`, `STUDIO_UX_TABLES.md`, `STUDIO_UX_NAVIGATION.md` | ✅ |
 | Produtos · Products | `desktop/STUDIO_UX_DESKTOP.md`, `mobile/STUDIO_UX_MOBILE.md` | ✅ |
-| Evolução · Evolution | `STUDIO_UX_ROADMAP.md`, `research/REFERENCES.md` | ✅ |
+| Qualidade · Quality | `STUDIO_UX_CERTIFICATION.md` | ✅ |
+| Evolução · Evolution | `STUDIO_UX_ROADMAP.md` (fases 1.5/1.6), `research/REFERENCES.md` | ✅ |
 
 ---
 
 ## 🎯 O que vem agora · What comes next
 
-**PT** — A Fase 1 é fundação documental. A próxima frente (Fase 2) é a **materialização dos Design Tokens** (escolher valores concretos de cor, tipografia, espaçamento, etc., a partir da arquitetura já documentada) — ver `STUDIO_UX_ROADMAP.md`. **Uma frente por vez, com validação humana entre frentes.** Nada de implementar componente antes de os tokens estarem congelados.
+**PT** — Fases 1 e 1.5 concluídas. A próxima frente é a **Fase 1.6 — UI Exploration**: produzir estudos visuais descritivos em `research/ui-exploration/` (todos derivados do `VISUAL_DNA`, nenhum definitivo) **para validar a linguagem visual com o Robson antes de implementar componentes**. Só depois dessa validação começa a **Fase 2 — materialização dos Design Tokens** (valores concretos). **Uma frente por vez, com validação humana entre frentes.** A pasta `research/ui-exploration/` já foi criada com um guia; os estudos aguardam o "vai".
 
-**EN** — Phase 1 is the documentation foundation. The next front (Phase 2) is **materializing the Design Tokens** (choosing concrete values for color, typography, spacing, etc., from the already-documented architecture) — see `STUDIO_UX_ROADMAP.md`. **One front at a time, with human validation between fronts.** Do not implement components before tokens are frozen.
+**EN** — Phases 1 and 1.5 complete. The next front is **Phase 1.6 — UI Exploration**: produce descriptive visual studies in `research/ui-exploration/` (all derived from `VISUAL_DNA`, none definitive) **to validate the visual language with Robson before implementing components**. Only after that validation does **Phase 2 — materializing the Design Tokens** (concrete values) begin. **One front at a time, with human validation between fronts.** The `research/ui-exploration/` folder is scaffolded with a guide; the studies await the go-ahead.
 
 ---
 

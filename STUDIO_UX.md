@@ -58,6 +58,7 @@
 5. **Desconfie de inconsistência silenciosa. / Distrust silent inconsistency.** Um valor "quase igual" (um `padding` de 15px onde o token é 16px) é o bug do design system: parece certo e corrói a família. Sempre ancorar em token.
 6. **Arquitetura antes de estética. / Architecture before aesthetics.** Nesta fase definimos *como* tokens, temas e componentes funcionam — não os valores/estilos finais.
 7. **Pós-compactação = re-ancorar antes de agir. / After context compaction, re-anchor before acting.** A primeira ação após um resumo de sessão é reler este arquivo + o topo do `CHANGELOG.md` + `docs/context/STUDIO_UX_HANDOFF.md` e conferir o estado real (git, ls, ler o arquivo) antes de recomendar ou tocar em nada. Nunca cravar versão/nome de arquivo de cabeça. Tag nunca é reusada.
+8. **Antes de criar um documento, pergunte: "assunto novo ou já tem dono?" / Before creating a document, ask: "new subject or already owned?"** Se o assunto pertence a um documento existente, **expanda o existente — não crie outro** (viola SSOT, §11). Só nasce documento novo quando é um domínio de conhecimento genuinamente novo. E todo documento novo passa antes pelo **Architecture Boundary Check** (§12). / If the subject belongs to an existing document, **expand it — do not create another** (violates SSOT, §11). A new document is born only for a genuinely new knowledge domain. And every new document first passes the **Architecture Boundary Check** (§12).
 
 ---
 
@@ -163,8 +164,82 @@ Toda mudança: entrada no `CHANGELOG.md` → commit → **tag anotada e imutáve
 
 ## 10. 🚦 SINAIS DE ALARME · RED FLAGS
 
-**PT / EN** — Pare e revise se aparecer: espaçamento/cor/raio fora de token ("valor mágico"); componente novo que já existe em `components/`; Desktop virando Mobile só por media query; jargão técnico renderizado como texto de UI; documento só em uma língua; princípio renumerado; doc guardando histórico de correção; decisão arquitetural dependente de um segmento de negócio; sombra/animação chamando mais atenção que o dado.
+**PT / EN** — Pare e revise se aparecer: espaçamento/cor/raio fora de token ("valor mágico"); componente novo que já existe em `components/`; Desktop virando Mobile só por media query; jargão técnico renderizado como texto de UI; documento só em uma língua; princípio renumerado; doc guardando histórico de correção; decisão arquitetural dependente de um segmento de negócio; sombra/animação chamando mais atenção que o dado; **o mesmo assunto definido em dois documentos (viola SSOT, §11); documento novo sem Architecture Boundary Check (§12); regra que amarra a princípios permanentes a uma tecnologia específica (viola §13).**
 
 ---
 
-*Versão do documento / Document version: 1.0.0 — 15/07/2026. Corresponde ao Studio UX `v0.1.0` (fundação documental).*
+## 11. 🗂️ SINGLE SOURCE OF TRUTH POR DOMÍNIO · SINGLE SOURCE OF TRUTH PER DOMAIN
+
+**PT** — Cada domínio de conhecimento tem **um, e só um, documento dono**. O dono é a única fonte da verdade daquele assunto: é onde a regra nasce, evolui e é corrigida. Todos os outros documentos **referenciam** o dono — nunca redefinem, nunca duplicam, nunca contradizem. Se dois documentos descrevem o mesmo assunto, um deles está errado por construção. Esta regra é o que mantém a documentação consistente à medida que cresce e elimina o risco de divergência ao longo dos anos.
+
+**EN** — Each knowledge domain has **one, and only one, owner document**. The owner is the single source of truth for that subject: it is where the rule is born, evolves and is corrected. Every other document **references** the owner — never redefines, never duplicates, never contradicts. If two documents describe the same subject, one of them is wrong by construction. This rule keeps the documentation consistent as it grows and removes the risk of divergence over the years.
+
+**Mapa de donos por domínio · Domain ownership map:**
+
+| Domínio · Domain | Dono único · Sole owner |
+|---|---|
+| Governança, versionamento, SSOT · Governance, versioning, SSOT | `STUDIO_UX.md` |
+| Visão · Vision | `docs/STUDIO_UX_VISION.md` |
+| Filosofia · Philosophy | `docs/STUDIO_UX_PHILOSOPHY.md` |
+| Princípios P1…Pn · Principles | `docs/STUDIO_UX_PRINCIPLES.md` |
+| DNA visual / personalidade · Visual DNA / personality | `docs/STUDIO_UX_VISUAL_DNA.md` |
+| Gramática de composição · Composition grammar | `docs/STUDIO_UX_GRAMMAR.md` |
+| Superfícies e elevação · Surfaces & elevation | `docs/STUDIO_UX_SURFACES.md` |
+| Ritmo visual · Visual rhythm | `docs/STUDIO_UX_VISUAL_RHYTHM.md` |
+| Arquitetura de tokens · Token architecture | `docs/tokens/STUDIO_UX_DESIGN_TOKENS.md` |
+| Cor · Color | `docs/tokens/STUDIO_UX_COLOR_SYSTEM.md` |
+| Tipografia · Typography | `docs/tokens/STUDIO_UX_TYPOGRAPHY.md` |
+| Espaçamento · Spacing | `docs/tokens/STUDIO_UX_SPACING.md` |
+| Temas · Themes | `docs/STUDIO_UX_THEMES.md` |
+| Iconografia · Iconography | `docs/STUDIO_UX_ICONOGRAPHY.md` |
+| Movimento · Motion | `docs/STUDIO_UX_ANIMATIONS.md` |
+| Layout, grid, regiões, camadas · Layout, grid, regions, layers | `docs/layouts/STUDIO_UX_LAYOUT_SYSTEM.md` |
+| Catálogo de componentes · Component catalog | `docs/components/STUDIO_UX_COMPONENT_LIBRARY.md` |
+| Padrões de fluxo · Flow patterns | `docs/patterns/STUDIO_UX_PATTERNS.md` |
+| Acessibilidade · Accessibility | `docs/STUDIO_UX_ACCESSIBILITY.md` |
+| Dashboards · Dashboards | `docs/STUDIO_UX_DASHBOARD.md` |
+| Formulários · Forms | `docs/STUDIO_UX_FORMS.md` |
+| Tabelas de dados · Data tables | `docs/STUDIO_UX_TABLES.md` |
+| Navegação · Navigation | `docs/STUDIO_UX_NAVIGATION.md` |
+| Certificação de tela · Screen certification | `docs/STUDIO_UX_CERTIFICATION.md` |
+| Engenharia reversa de referências · Reference reverse-engineering | `docs/research/REFERENCE_DNA.md` |
+| Produto Desktop · Desktop product | `docs/desktop/STUDIO_UX_DESKTOP.md` |
+| Produto Mobile · Mobile product | `docs/mobile/STUDIO_UX_MOBILE.md` |
+| Regras para IA · AI rules | `docs/context/AI_RULES.md` |
+
+**PT** — Fronteira exemplar (permanente): **`GRAMMAR` define "o que existe"** (os níveis de composição e como se aninham); **`LAYOUT_SYSTEM` define "onde existe"** (grid, colunas, gutters, margens, breakpoints, z-index, regiões físicas). Grammar nunca fala de grid; Layout nunca fala de gramática. Ver o ADR em `STUDIO_UX_GRAMMAR.md`.
+
+**EN** — Exemplary (permanent) boundary: **`GRAMMAR` defines "what exists"** (the composition levels and how they nest); **`LAYOUT_SYSTEM` defines "where it exists"** (grid, columns, gutters, margins, breakpoints, z-index, physical regions). Grammar never talks about grid; Layout never talks about grammar. See the ADR in `STUDIO_UX_GRAMMAR.md`.
+
+---
+
+## 12. ✅ ARCHITECTURE BOUNDARY CHECK — obrigatório antes de todo doc novo · mandatory before every new doc
+
+**PT** — Nenhum documento nasce sem antes responder cinco perguntas, e o resultado fica **registrado no topo do próprio documento** (logo após o cabeçalho). Isto previne sobreposição de responsabilidade antes que ela aconteça.
+
+**EN** — No document is born without first answering five questions, and the result is **recorded at the top of the document itself** (right after the header). This prevents responsibility overlap before it happens.
+
+Perguntas · Questions: (1) Qual problema este documento resolve? / What problem does this document solve? · (2) Por que ele não pertence a um documento existente? / Why doesn't it belong to an existing document? · (3) Quais documentos ele complementa? / Which documents does it complement? · (4) Quais documentos ele nunca deve substituir? / Which documents must it never replace? · (5) Quem é o dono deste assunto? / Who owns this subject?
+
+Formato do bloco · Block format:
+
+```
+Architecture Boundary Check — STUDIO_UX_EXEMPLO
+Resolve · Solves:            <o problema único / the single problem>
+Não pertence a outro porque · Not elsewhere because: <razão / reason>
+Complementa · Complements:   <docs>
+Nunca substitui · Never replaces: <docs>
+Dono · Owner:                <este doc, para o domínio X / this doc, for domain X>
+```
+
+---
+
+## 13. ⏳ HORIZONTE DE 10 ANOS — princípios permanentes, não tecnologia · 10-YEAR HORIZON — permanent principles, not technology
+
+**PT** — Toda a documentação normativa descreve **princípios permanentes de experiência, composição e design**, independentes de qualquer tecnologia de implementação. Um documento do Studio UX **não pode depender** de framework, biblioteca ou linguagem específicos — nada de React, Tailwind, shadcn, Vue, CSS, HTML ou o que estiver na moda. Essas tecnologias mudam em ciclos de poucos anos; o Studio UX é feito para durar uma década e mais. A camada de implementação virá depois, como um *tradutor* dos princípios para a tecnologia do momento, e é descartável/substituível sem tocar na fundação. Regra prática: se uma frase só faz sentido dentro de uma tecnologia (ex.: "use a classe utilitária X", "o hook Y"), ela não pertence à documentação de princípios.
+
+**EN** — All normative documentation describes **permanent principles of experience, composition and design**, independent of any implementation technology. A Studio UX document **must not depend** on a specific framework, library or language — no React, Tailwind, shadcn, Vue, CSS, HTML or whatever is trending. Those technologies change on a few-year cycle; Studio UX is built to last a decade and beyond. The implementation layer comes later, as a *translator* of the principles into the technology of the day, and is disposable/replaceable without touching the foundation. Practical rule: if a sentence only makes sense inside one technology (e.g. "use utility class X", "the Y hook"), it does not belong in the principles documentation.
+
+---
+
+*Versão do documento / Document version: 1.1.0 — 15/07/2026. Corresponde ao Studio UX `v0.2.0` (Fase 1.5 — linguagem visual). 1.0.0 — `v0.1.0` (fundação documental).*

@@ -14,8 +14,8 @@
 
 ## Estado atual · Current status
 
-- **Versão / Version:** `v0.1.0`
-- **Fase / Phase:** Fase 1 — Fundação Conceitual e Documental. **Somente documentação; nenhum componente, token final ou tela foi implementado ainda.** / Phase 1 — Conceptual & Documentation Foundation. **Documentation only; no components, final tokens or screens implemented yet.**
+- **Versão / Version:** `v0.2.0`
+- **Fase / Phase:** Fase 1.5 — Linguagem Visual concluída. **Somente documentação; nenhum componente, token final ou tela foi implementado ainda.** Próximo: Fase 1.6 (UI Exploration) → Fase 2 (tokens). / Phase 1.5 — Visual Language complete. **Documentation only; no components, final tokens or screens yet.** Next: Phase 1.6 (UI Exploration) → Phase 2 (tokens).
 - **Idioma / Language:** Bilíngue PT-BR + EN em toda a documentação normativa. / Bilingual PT-BR + EN across all normative docs.
 
 ## Comece por aqui · Start here
@@ -28,11 +28,15 @@
 ## Mapa da documentação · Documentation map
 
 ```
-Conceito / Concept      → VISION · PHILOSOPHY · PRINCIPLES · AI_CONTEXT
+Conceito / Concept      → VISION · PHILOSOPHY · PRINCIPLES · AI_CONTEXT · AI_RULES
+Linguagem visual /      → VISUAL_DNA · GRAMMAR · SURFACES · VISUAL_RHYTHM
+  Visual language          REFERENCE_DNA
 Fundação / Foundation   → DESIGN_TOKENS · COLOR_SYSTEM · TYPOGRAPHY · SPACING
                           THEMES · ICONOGRAPHY · ANIMATIONS
 Estrutura / Structure   → LAYOUT_SYSTEM · COMPONENT_LIBRARY · PATTERNS · ACCESSIBILITY
+Composição / Composition→ DASHBOARD · FORMS · TABLES · NAVIGATION
 Produtos / Products     → DESKTOP · MOBILE
+Qualidade / Quality     → CERTIFICATION
 Evolução / Evolution    → ROADMAP · CHANGELOG · HANDOFF
 ```
 

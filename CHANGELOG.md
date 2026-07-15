@@ -12,6 +12,28 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [0.2.0] — 2026-07-15
+
+### Adicionado · Added
+
+**PT — Fase 1.5: Linguagem Visual.** O produto ganha sua identidade e linguagem visual, permanecendo do lado da arquitetura da linha (caráter e regras; **nenhum valor estético final** — esses seguem na Fase 2). Nada contradiz a Fase 1 congelada.
+
+**EN — Phase 1.5: Visual Language.** The product gains its identity and visual language, staying on the architecture side of the line (character and rules; **no final aesthetic values** — those come in Phase 2). Nothing contradicts the frozen Phase 1.
+
+- **DNA e composição / DNA & composition:** `docs/STUDIO_UX_VISUAL_DNA.md`, `docs/STUDIO_UX_GRAMMAR.md` (com ADR-001 da fronteira Grammar × Layout System), `docs/STUDIO_UX_SURFACES.md`, `docs/STUDIO_UX_VISUAL_RHYTHM.md`.
+- **Guias de domínio / Domain guides:** `docs/STUDIO_UX_DASHBOARD.md`, `docs/STUDIO_UX_FORMS.md`, `docs/STUDIO_UX_TABLES.md`, `docs/STUDIO_UX_NAVIGATION.md`.
+- **Governança da qualidade / Quality governance:** `docs/STUDIO_UX_CERTIFICATION.md` (auditoria de tela, níveis Bronze/Silver/Gold/Platinum), `docs/context/AI_RULES.md` (regras imperativas para IA).
+- **Engenharia reversa / Reverse-engineering:** `docs/research/REFERENCE_DNA.md` (13 referências, "princípios, nunca cópia").
+
+### Alterado · Changed
+
+- **PT — Governança reforçada** em `STUDIO_UX.md` (adições, sem reabrir Fase 1): §11 **Single Source of Truth por domínio** (+ mapa de donos), §12 **Architecture Boundary Check** obrigatório, §13 **horizonte de 10 anos / tech-agnóstico**, e a 8ª regra de ouro ("assunto novo ou já tem dono?"). Doc de governança → v1.1.0.
+- **EN — Reinforced governance** in `STUDIO_UX.md` (additions, without reopening Phase 1): §11 SSOT per domain (+ ownership map), §12 mandatory Architecture Boundary Check, §13 10-year/tech-agnostic horizon, and the 8th golden rule.
+- **Docs-índice vivos atualizados / Living index docs updated:** `ROADMAP` (fases 1.5 e 1.6 inseridas), `README` (mapa), `context/STUDIO_UX_HANDOFF.md` (estado), `context/STUDIO_UX_AI_CONTEXT.md` (ordem de leitura).
+- **PT — Fase 1.6 (UI Exploration) registrada no roadmap** e pasta `research/ui-exploration/` criada com guia (estudos visuais viriam após validação humana). / **EN — Phase 1.6 (UI Exploration) recorded in the roadmap** and `research/ui-exploration/` scaffolded with a guide.
+
+---
+
 ## [0.1.0] — 2026-07-15
 
 ### Adicionado · Added

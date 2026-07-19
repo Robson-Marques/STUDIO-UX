@@ -8,7 +8,32 @@
 
 ## [Unreleased]
 
-**Fase 4 (Mobile) — paridade do CRUD.** / Phase 4 (Mobile) — CRUD parity.
+Nada pendente. / Nothing pending.
+
+---
+
+## [1.0.7] — 2026-07-15 — Playground (catálogo vivo) · Playground (live catalog)
+
+- ✅ `playground/index.html` — catálogo vivo navegável: todos os componentes por categoria (Fundamentais, Formulário, Dados, Navegação, Overlays, Feedback), em seus estados, com **troca de tema (claro/escuro)** e **seletor de cor de ação ao vivo** (7 acentos) — prova o eixo de marca do `THEMES` reapontando `--su-action` e a interface inteira acompanhando.
+
+---
+
+## [1.0.6] — 2026-07-15 — Camada React completa · React layer complete
+
+- ✅ `packages/react/` ampliado até a paridade com o catálogo Desktop (~35 componentes): `Select`, `Checkbox`, `Radio`, `Switch`, `SegmentedControl`, `Stepper`, `Sidebar`/`NavItem`/`TopBar`/`Breadcrumb`, `Drawer`/`Sheet`/`Menu`/`Tooltip`/`Popover`, `DescriptionList`/`Timeline`/`Pagination`/`Accordion`, `EmptyState`/`Skeleton`/`Spinner`/`ProgressBar`. Barrel `index.js` atualizado.
+- Cada componente aponta para uma classe `.su-*` existente; props → estados, nunca valores (P1); acessibilidade reforçada (aria, foco, Esc).
+
+---
+
+## [1.0.5] — 2026-07-15 — Camada React (núcleo) · React layer (core)
+
+- ✅ `packages/react/` — adapter React: `Button`/`IconButton`, `Badge`, `Field`/`Input`/`PhoneInput`, `Card`/`StatCard`, `Tabs`, `Modal`/`ConfirmDialog`, `ToastProvider`/`useToast`, `DataTable` (seleção em lote) + `index.js` (barrel) + `README`.
+- ✅ `package.json` para `@studio-ux/tokens`, `@studio-ux/components`, `@studio-ux/react` (imports reais/instaláveis).
+- **Regra:** o adapter só embrulha classes `.su-*` (zero estilo novo); props traduzem para estados, nunca valores (P1). É runtime descartável (`RUNTIME`), não Specification.
+
+---
+
+## [1.0.4] — 2026-07-15 — Fase 4 (Mobile) completa · Phase 4 (Mobile) complete
 
 - ✅ `packages/mobile/mobile.css` ampliado: cabeçalho de detalhe, sub-abas por toque, KPI compacto, ações rápidas (círculos), CTA + rodapé fixo, campo grande de toque, barra de progresso de etapa, sync/offline.
 - ✅ `examples/mobile-detalhe.html` — detalhe do cliente (KPIs, ações rápidas, dados, CTA).

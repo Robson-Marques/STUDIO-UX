@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio UX — Playground</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../packages/tokens/tokens.css">
+  <link rel="stylesheet" href="../packages/components/components.css">
+  <style>
+    body { margin: 0; background: var(--su-surface-base); color: var(--su-text-primary); font-family: var(--su-font-ui); }
+    .top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 16px; padding: 12px 24px; background: var(--su-surface-raised); border-bottom: 1px solid var(--su-border-default); }
+    .top__title { font-size: 15px; font-weight: 600; flex: 1; display: flex; align-items: center; gap: 8px; }
+    .swatches { display: flex; gap: 6px; }
+    .sw { width: 22px; height: 22px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; }
+    .sw--on { box-shadow: 0 0 0 2px var(--su-surface-raised), 0 0 0 4px currentColor; }
+    .layout { display: flex; }
+    .side { width: 200px; flex: none; position: sticky; top: 57px; align-self: flex-start; padding: 16px 8px; height: calc(100vh - 57px); overflow: auto; border-right: 1px solid var(--su-border-subtle); }
+    .side a { display: block; padding: 7px 12px; border-radius: 8px; font-size: 13px; color: var(--su-text-secondary); text-decoration: none; }
+    .side a:hover { background: var(--su-surface-sunken); color: var(--su-text-primary); }
+    main { flex: 1; min-width: 0; padding: 24px 32px 120px; max-width: 900px; }
+    section { padding-top: 8px; margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 600; margin: 0 0 4px; }
+    .sub { font-size: 13px; color: var(--su-text-secondary); margin-bottom: 18px; }
+    h3 { font-size: 12px; font-weight: 600; color: var(--su-text-muted); text-transform: none; margin: 24px 0 10px; }
+    .demo { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; padding: 18px; border: 1px solid var(--su-border-default); border-radius: 12px; background: var(--su-surface-raised); }
+    .demo--col { flex-direction: column; align-items: stretch; }
+    .field-search { display: flex; align-items: center; gap: 8px; border: 1px solid var(--su-border-default); border-radius: var(--su-radius-md); padding: 6px 10px; color: var(--su-text-muted); font-size: 12px; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body class="su">
+  <div class="top">
+    <span class="top__title"><span style="width:22px;height:22px;border-radius:7px;background:var(--su-action);color:#fff;display:inline-flex;align-items:center;justify-content:center;"><i class="ti ti-square-rounded"></i></span>Studio UX — Playground</span>
+    <span style="font-size:12px;color:var(--su-text-muted);">Cor de ação</span>
+    <div class="swatches" id="swatches"></div>
+    <button class="su-iconbtn" aria-label="Alternar tema" onclick="var h=document.documentElement;h.dataset.theme=h.dataset.theme==='dark'?'light':'dark';"><i class="ti ti-moon"></i></button>
+  </div>
+
+  <div class="layout">
+    <nav class="side">
+      <a href="#fundamentais">Fundamentais</a>
+      <a href="#formulario">Formulário</a>
+      <a href="#dados">Dados</a>
+      <a href="#navegacao">Navegação</a>
+      <a href="#overlays">Overlays</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+
+    <main>
+      <!-- FUNDAMENTAIS -->
+      <section id="fundamentais">
+        <h2>Fundamentais</h2>
+        <div class="sub">Button, IconButton, Badge, Spinner.</div>
+        <h3>Button — variantes</h3>
+        <div class="demo">
+          <button class="su-btn su-btn--primary">Primary</button>
+          <button class="su-btn su-btn--secondary">Secondary</button>
+          <button class="su-btn su-btn--ghost">Ghost</button>
+          <button class="su-btn su-btn--danger">Danger</button>
+          <button class="su-btn su-btn--primary" disabled>Disabled</button>
+        </div>
+        <h3>Button — tamanhos e ícone</h3>
+        <div class="demo">
+          <button class="su-btn su-btn--secondary su-btn--sm">Small</button>
+          <button class="su-btn su-btn--secondary">Medium</button>
+          <button class="su-btn su-btn--secondary su-btn--lg">Large</button>
+          <button class="su-btn su-btn--primary"><i class="ti ti-plus"></i>Com ícone</button>
+          <button class="su-iconbtn" aria-label="Editar"><i class="ti ti-edit"></i></button>
+        </div>
+        <h3>Badge / Status</h3>
+        <div class="demo">
+          <span class="su-badge su-badge--success">Ativo</span>
+          <span class="su-badge su-badge--warning">Pendente</span>
+          <span class="su-badge su-badge--danger">Inadimplente</span>
+          <span class="su-badge su-badge--info">Novo</span>
+          <span class="su-spinner"></span>
+        </div>
+      </section>
+
+      <!-- FORMULÁRIO -->
+      <section id="formulario">
+        <h2>Formulário</h2>
+        <div class="sub">Field, Input, PhoneInput, Select, Checkbox, Radio, Switch, Segmented, Stepper.</div>
+        <div class="demo demo--col" style="max-width:420px;">
+          <div class="su-field"><label class="su-field__label">Nome</label><input class="su-input" value="Marina Alves"></div>
+          <div class="su-field su-field--error"><label class="su-field__label">E-mail</label><input class="su-input" value="marina@empresa"><span class="su-field__error"><i class="ti ti-alert-circle"></i>Digite um e-mail válido.</span></div>
+          <div class="su-field"><label class="su-field__label">Telefone</label>
+            <div class="su-phoneinput"><button class="su-phoneinput__country" type="button">🇧🇷 +55 <i class="ti ti-chevron-down" style="font-size:13px;color:var(--su-text-muted);"></i></button><input class="su-phoneinput__input" placeholder="27 99999-8888"></div>
+          </div>
+          <div class="su-field"><label class="su-field__label">Plano</label><select class="su-select"><option>Vitalício</option><option>Mensal</option></select></div>
+        </div>
+        <h3>Checkbox · Radio · Switch · Segmented</h3>
+        <div class="demo">
+          <label style="display:flex;align-items:center;gap:7px;font-size:13px;"><input type="checkbox" class="su-checkbox" checked>Ativo</label>
+          <label style="display:flex;align-items:center;gap:7px;font-size:13px;"><input type="radio" name="r" class="su-radio" checked>Sim</label>
+          <label style="display:flex;align-items:center;gap:7px;font-size:13px;"><input type="radio" name="r" class="su-radio">Não</label>
+          <label class="su-switch"><input type="checkbox" checked><span class="su-switch__track"></span></label>
+          <div class="su-segmented"><button class="su-segment su-segment--active">Mês</button><button class="su-segment">Ano</button></div>
+        </div>
+        <h3>Stepper</h3>
+        <div class="demo"><div class="su-stepper" style="width:100%;max-width:460px;" id="stepperDemo"></div></div>
+      </section>
+
+      <!-- DADOS -->
+      <section id="dados">
+        <h2>Dados</h2>
+        <div class="sub">Card, StatCard, Table, DescriptionList, Timeline, Pagination, ProgressBar.</div>
+        <h3>StatCard</h3>
+        <div class="demo">
+          <div class="su-statcard" style="min-width:150px;"><div class="su-statcard__label">Receita</div><div class="su-statcard__value">R$ 148k</div><div style="font-size:12px;color:var(--su-success-fg);margin-top:4px;">↑ 8,4%</div></div>
+          <div class="su-statcard" style="min-width:150px;"><div class="su-statcard__label">Inadimplência</div><div class="su-statcard__value">3,1%</div><div style="font-size:12px;color:var(--su-danger-fg);margin-top:4px;">↓ 0,4%</div></div>
+        </div>
+        <h3>Table</h3>
+        <div class="su-table-card">
+          <table class="su-table">
+            <thead><tr><th>Cliente</th><th>Status</th><th class="num">Total</th></tr></thead>
+            <tbody>
+              <tr><td>Marina Alves</td><td><span class="su-badge su-badge--success">Ativo</span></td><td class="num">R$ 3.240</td></tr>
+              <tr><td>Carlos Nogueira</td><td><span class="su-badge su-badge--warning">Pendente</span></td><td class="num">R$ 1.980</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>DescriptionList · ProgressBar · Pagination</h3>
+        <div class="demo demo--col" style="max-width:420px;">
+          <div class="su-dl">
+            <div class="su-dl__row"><span class="su-dl__key">Plano</span><span class="su-dl__val">Vitalício</span></div>
+            <div class="su-dl__row"><span class="su-dl__key">Total pago</span><span class="su-dl__val">R$ 3.240</span></div>
+          </div>
+          <div class="su-progress"><div class="su-progress__fill" style="width:68%;"></div></div>
+          <div class="su-pagination"><span class="su-page su-page--nav"><i class="ti ti-chevron-left"></i></span><span class="su-page su-page--active">1</span><span class="su-page">2</span><span class="su-page">3</span><span class="su-page su-page--nav"><i class="ti ti-chevron-right"></i></span></div>
+        </div>
+      </section>
+
+      <!-- NAVEGAÇÃO -->
+      <section id="navegacao">
+        <h2>Navegação</h2>
+        <div class="sub">Tabs (folder + pills), Breadcrumb.</div>
+        <div class="demo demo--col">
+          <div class="su-breadcrumb">Início <span>/</span> <a>Clientes</a> <span>/</span> Detalhe</div>
+          <div class="su-tabs"><button class="su-tab su-tab--active">Visão geral</button><button class="su-tab">Faturas</button><button class="su-tab">Histórico</button></div>
+          <div class="su-tabs su-tabs--pills" style="border:none;"><button class="su-tab su-tab--active">Todos</button><button class="su-tab">Ativos</button><button class="su-tab">Inativos</button></div>
+        </div>
+      </section>
+
+      <!-- OVERLAYS -->
+      <section id="overlays">
+        <h2>Overlays</h2>
+        <div class="sub">Menu, Tooltip, Modal, ConfirmDialog (clique para abrir).</div>
+        <div class="demo">
+          <button class="su-btn su-btn--secondary" onclick="document.getElementById('m1').classList.toggle('hidden')">Abrir Modal</button>
+          <button class="su-btn su-btn--danger" onclick="document.getElementById('m2').classList.toggle('hidden')">Excluir (ConfirmDialog)</button>
+          <span class="su-tooltip">Tooltip de exemplo</span>
+        </div>
+        <h3>Menu</h3>
+        <div class="demo"><div class="su-menu" style="min-width:200px;position:static;box-shadow:none;">
+          <div class="su-menu__item"><i class="ti ti-eye"></i>Ver detalhe</div>
+          <div class="su-menu__item"><i class="ti ti-edit"></i>Editar</div>
+          <div class="su-menu__sep"></div>
+          <div class="su-menu__item su-menu__item--danger"><i class="ti ti-trash"></i>Excluir</div>
+        </div></div>
+      </section>
+
+      <!-- FEEDBACK -->
+      <section id="feedback">
+        <h2>Feedback</h2>
+        <div class="sub">EmptyState, Skeleton, Toast (clique).</div>
+        <div class="demo" style="gap:24px;">
+          <div style="flex:1;min-width:200px;" class="su-empty">
+            <div class="su-empty__icon"><i class="ti ti-inbox"></i></div>
+            <div class="su-empty__title">Nenhum cliente ainda</div>
+            <div style="font-size:13px;margin-top:4px;">Cadastre o primeiro para começar.</div>
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <span class="su-skeleton" style="display:block;height:9px;width:70%;margin-bottom:9px;"></span>
+            <span class="su-skeleton" style="display:block;height:9px;width:90%;margin-bottom:9px;"></span>
+            <span class="su-skeleton" style="display:block;height:9px;width:55%;"></span>
+          </div>
+        </div>
+        <div class="demo"><button class="su-btn su-btn--primary" onclick="showToast()"><i class="ti ti-check"></i>Disparar toast</button></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modais -->
+  <div id="m1" class="su-scrim hidden" onclick="if(event.target===this)this.classList.add('hidden')">
+    <div class="su-modal"><div class="su-modal__head">Novo cliente</div><div class="su-modal__body">Um modal para tarefa curta. Formulário longo usa tela dedicada.</div><div class="su-modal__foot"><button class="su-btn su-btn--secondary" onclick="document.getElementById('m1').classList.add('hidden')">Cancelar</button><button class="su-btn su-btn--primary" onclick="document.getElementById('m1').classList.add('hidden')">Salvar</button></div></div>
+  </div>
+  <div id="m2" class="su-scrim hidden" onclick="if(event.target===this)this.classList.add('hidden')">
+    <div class="su-modal"><div class="su-modal__head">Excluir cliente?</div><div class="su-modal__body">Marina Alves e todo o histórico serão removidos. Esta ação não pode ser desfeita.</div><div class="su-modal__foot"><button class="su-btn su-btn--secondary" onclick="document.getElementById('m2').classList.add('hidden')">Cancelar</button><button class="su-btn su-btn--danger" onclick="document.getElementById('m2').classList.add('hidden')">Excluir</button></div></div>
+  </div>
+  <div id="toasts" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:2000;"></div>
+
+  <style>.hidden{display:none!important;}</style>
+  <script>
+    // Cor de ação — troca ao vivo (eixo de marca do THEMES)
+    var accents = {
+      'Índigo': ['#4F46E5','#4338CA','#3730A3','#EEEFFE'],
+      'Azul':   ['#2563EB','#1D4FD7','#1E40AF','#E8F0FE'],
+      'Teal':   ['#0F766E','#0B5D57','#0A4A45','#E1F1EF'],
+      'Verde':  ['#047857','#036145','#024C36','#E6F4EE'],
+      'Violeta':['#7C3AED','#6A2BD4','#5B21B6','#F1E9FE'],
+      'Cobre':  ['#B45309','#96440A','#7C3908','#FBF0DD'],
+      'Grafite':['#334155','#293445','#1E293B','#EDEFF3']
+    };
+    var sw = document.getElementById('swatches'), root = document.documentElement.style;
+    function setAccent(v, el){
+      root.setProperty('--su-action', v[0]); root.setProperty('--su-action-hover', v[1]);
+      root.setProperty('--su-action-active', v[2]); root.setProperty('--su-action-tint', v[3]);
+      root.setProperty('--su-border-focus', v[0]);
+      document.querySelectorAll('.sw').forEach(function(s){ s.classList.remove('sw--on'); });
+      el.classList.add('sw--on');
+    }
+    Object.keys(accents).forEach(function(name, i){
+      var v = accents[name], el = document.createElement('span');
+      el.className = 'sw' + (i===0?' sw--on':''); el.style.background = v[0]; el.style.color = v[0]; el.title = name;
+      el.onclick = function(){ setAccent(v, el); };
+      sw.appendChild(el);
+    });
+
+    // Stepper demo
+    (function(){
+      var steps=['Dados','Contato','Endereço','Cobrança'], cur=2, html='';
+      steps.forEach(function(label,idx){var n=idx+1,cls=n<cur?'su-step su-step--done':(n===cur?'su-step su-step--current':'su-step');var dot=n<cur?'<i class="ti ti-check"></i>':n;html+='<div class="'+cls+'"><span class="su-step__dot">'+dot+'</span><span class="su-step__label">'+label+'</span></div>';if(n<steps.length)html+='<span class="su-step__line'+(n<cur?' su-step__line--done':'')+'"></span>';});
+      document.getElementById('stepperDemo').innerHTML=html;
+    })();
+
+    // Toast
+    function showToast(){
+      var t=document.createElement('div'); t.className='su-toast su-toast--success';
+      t.innerHTML='<span class="su-toast__icon"><i class="ti ti-check"></i></span>Cliente salvo.';
+      document.getElementById('toasts').appendChild(t);
+      setTimeout(function(){ t.remove(); }, 3000);
+    }
+  </script>
+</body>
+</html>

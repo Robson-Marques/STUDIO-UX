@@ -1,0 +1,17 @@
+{
+  "name": "@studio-ux/react",
+  "version": "1.0.0",
+  "description": "Adapter React sobre o Studio UX (embrulha as classes .su-* — runtime descartável).",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "peerDependenciesMeta": {
+    "@studio-ux/tokens": { "optional": false },
+    "@studio-ux/components": { "optional": false }
+  }
+}

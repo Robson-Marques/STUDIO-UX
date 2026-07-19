@@ -1,0 +1,56 @@
+/* Studio UX — Componentes Mobile (Fase 4)
+   Produto IRMÃO do Desktop, projetado do zero (P4, Art. 2).
+   Compartilha packages/tokens/tokens.css — NUNCA os layouts do Desktop.
+   Alvos de toque ≥ 44px (P19); superfícies planas; uma cor de ação. */
+
+.su-m { font-family: var(--su-font-ui); color: var(--su-text-primary); background: var(--su-surface-base); }
+
+/* ---------- Top Bar (minimalista) ---------- */
+.su-m-topbar { display: flex; align-items: center; gap: var(--su-space-3); padding: var(--su-space-3) var(--su-space-4); padding-top: max(var(--su-space-3), env(safe-area-inset-top)); background: var(--su-surface-raised); }
+.su-m-topbar__title { font-size: 18px; font-weight: var(--su-fw-semibold); flex: 1; }
+.su-m-greeting { padding: var(--su-space-2) var(--su-space-4); }
+.su-m-greeting__hi { font-size: 20px; font-weight: var(--su-fw-semibold); }
+.su-m-greeting__sub { font-size: 13px; color: var(--su-text-secondary); }
+
+/* ---------- Busca ---------- */
+.su-m-search { display: flex; align-items: center; gap: var(--su-space-2); margin: var(--su-space-3) var(--su-space-4); background: var(--su-surface-raised); border: 1px solid var(--su-border-default); border-radius: var(--su-radius-lg); padding: var(--su-space-3); color: var(--su-text-muted); font-size: 14px; min-height: 44px; box-sizing: border-box; }
+
+/* ---------- Lista tocável (item ≥ 44px) ---------- */
+.su-m-list { padding: 0 var(--su-space-4); }
+.su-m-item { display: flex; align-items: center; gap: var(--su-space-3); padding: var(--su-space-3) 0; min-height: 56px; border-top: 1px solid var(--su-border-subtle); }
+.su-m-item:first-child { border-top: none; }
+.su-m-item__avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--su-surface-sunken); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: var(--su-fw-medium); color: var(--su-text-secondary); flex: none; }
+.su-m-item__body { flex: 1; min-width: 0; }
+.su-m-item__title { font-size: 14px; color: var(--su-text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.su-m-item__sub { font-size: 12px; color: var(--su-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Coluna direita compacta: valor em cima, status embaixo (evita quebra em telas estreitas). */
+.su-m-item__end { flex: none; text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.su-m-item__value { font-size: 13px; font-weight: var(--su-fw-medium); color: var(--su-text-primary); }
+
+/* ---------- Card (unidade de conteúdo dominante) ---------- */
+.su-m-card { background: var(--su-surface-raised); border-radius: var(--su-radius-lg); padding: var(--su-space-4); box-shadow: var(--su-elevation-raised); margin: 0 var(--su-space-4) var(--su-space-3); }
+
+/* ---------- Chips de filtro (segmentado por toque) ---------- */
+.su-m-chips { display: flex; gap: var(--su-space-2); flex-wrap: wrap; }
+.su-m-chip { font-size: 13px; padding: 8px 14px; border-radius: var(--su-radius-full); border: 1px solid var(--su-border-strong); color: var(--su-text-primary); background: transparent; min-height: 36px; box-sizing: border-box; }
+.su-m-chip--active { background: var(--su-action); color: var(--su-text-on-action); border-color: transparent; }
+
+/* ---------- Bottom Sheet ---------- */
+.su-m-sheet { position: fixed; left: 0; right: 0; bottom: 0; background: var(--su-surface-overlay); border-radius: var(--su-radius-xl) var(--su-radius-xl) 0 0; box-shadow: 0 -8px 24px rgba(20,22,30,.14); padding: var(--su-space-2) var(--su-space-4) max(var(--su-space-5), env(safe-area-inset-bottom)); z-index: 1000; animation: su-m-sheet-in var(--su-duration-base) var(--su-ease-entrance); }
+@keyframes su-m-sheet-in { from { transform: translateY(28px); } to { transform: translateY(0); } }
+.su-m-sheet__handle { width: 34px; height: 4px; border-radius: 2px; background: var(--su-border-strong); margin: 0 auto var(--su-space-3); }
+
+/* ---------- Bottom Navigation (ao alcance do polegar) ---------- */
+.su-m-bottomnav { display: flex; align-items: flex-end; justify-content: space-between; background: var(--su-surface-raised); border-top: 1px solid var(--su-border-subtle); padding: var(--su-space-2) var(--su-space-5) max(var(--su-space-3), env(safe-area-inset-bottom)); }
+.su-m-navitem { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; color: var(--su-text-muted); min-width: 44px; min-height: 44px; justify-content: center; background: transparent; border: 0; outline: none; box-shadow: none; margin: 0; padding: 0; appearance: none; -webkit-appearance: none; font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.su-m-navitem:focus-visible { color: var(--su-action); }
+.su-m-navitem--active { color: var(--su-action); }
+.su-m-navitem i { font-size: 22px; }
+/* Ação central elevada (opcional) */
+.su-m-fab { width: 52px; height: 52px; border-radius: 50%; background: var(--su-action); color: var(--su-text-on-action); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-top: -20px; box-shadow: var(--su-elevation-overlay); border: none; }
+
+/* ---------- Pull-to-refresh (indicador) ---------- */
+.su-m-ptr { display: flex; align-items: center; justify-content: center; gap: var(--su-space-2); padding: var(--su-space-3); font-size: 12px; color: var(--su-text-muted); }
+
+/* ---------- Notificação in-app / status offline ---------- */
+.su-m-offline { display: flex; align-items: center; gap: var(--su-space-2); background: var(--su-warning-bg); color: var(--su-warning-fg); font-size: 12px; padding: var(--su-space-2) var(--su-space-4); justify-content: center; }

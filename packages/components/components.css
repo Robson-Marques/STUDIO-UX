@@ -121,8 +121,10 @@
 .su-topbar { display: flex; align-items: center; gap: var(--su-space-3); padding: var(--su-space-3) var(--su-space-5); border-bottom: 1px solid var(--su-border-default); background: var(--su-surface-raised); }
 
 .su-tabs { display: flex; gap: var(--su-space-5); border-bottom: 1px solid var(--su-border-default); }
-.su-tab { padding: var(--su-space-2) 0; font-size: 13px; color: var(--su-text-secondary); cursor: pointer; border: none; background: none; font-family: inherit; }
-.su-tab--active { color: var(--su-action); font-weight: var(--su-fw-medium); box-shadow: inset 0 -2px 0 var(--su-action); }
+.su-tab { padding: var(--su-space-2) 0; font-size: 13px; color: var(--su-text-secondary); cursor: pointer; border: 0; background: transparent; appearance: none; -webkit-appearance: none; outline: none; margin: 0; font-family: inherit; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.su-tab:hover { color: var(--su-text-primary); }
+.su-tab--active { color: var(--su-action); font-weight: var(--su-fw-medium); border-bottom-color: var(--su-action); }
+.su-tab:focus-visible { color: var(--su-action); }
 .su-tabs--pills { border: none; gap: 6px; }
 .su-tabs--pills .su-tab { padding: 6px 12px; border-radius: var(--su-radius-md); }
 .su-tabs--pills .su-tab--active { background: var(--su-action); color: var(--su-text-on-action); box-shadow: none; }
@@ -242,9 +244,25 @@
 
 /* ---------- SegmentedControl ---------- */
 .su-segmented { display: inline-flex; background: var(--su-surface-sunken); border-radius: var(--su-radius-md); padding: 2px; }
-.su-segment { font-size: 13px; padding: 6px 14px; border-radius: calc(var(--su-radius-md) - 2px); color: var(--su-text-secondary); cursor: pointer; border: none; background: none; font-family: inherit; }
+.su-segment { font-size: 13px; padding: 6px 14px; border-radius: calc(var(--su-radius-md) - 2px); color: var(--su-text-secondary); cursor: pointer; border: 0; background: transparent; appearance: none; -webkit-appearance: none; outline: none; margin: 0; font-family: inherit; }
 .su-segment--active { background: var(--su-surface-raised); color: var(--su-text-primary); box-shadow: var(--su-elevation-raised); }
 
 /* ---------- DividerLine (utilitário) ---------- */
 .su-divider { height: 1px; background: var(--su-border-subtle); border: none; margin: var(--su-space-4) 0; }
+
+/* ---------- PhoneInput (E.164, seletor de país) ---------- */
+/* Regra: valor guardado em E.164 só-dígitos, com DDI, sem "+" (COMPONENT_LIBRARY). */
+.su-phoneinput { display: flex; align-items: stretch; border: 1px solid var(--su-border-default); border-radius: var(--su-radius-md); background: var(--su-surface-raised); overflow: hidden; }
+.su-phoneinput:focus-within { border-color: var(--su-border-focus); box-shadow: 0 0 0 3px var(--su-action-tint); }
+.su-phoneinput__country { display: flex; align-items: center; gap: 6px; padding: 0 10px; border-right: 1px solid var(--su-border-default); font-size: 14px; color: var(--su-text-primary); cursor: pointer; background: var(--su-surface-sunken); white-space: nowrap; }
+.su-phoneinput__input { border: none; outline: none; flex: 1; min-width: 0; padding: 0 var(--su-space-3); height: 38px; font-family: var(--su-font-ui); font-size: 14px; color: var(--su-text-primary); background: transparent; }
+.su-phoneinput__input::placeholder { color: var(--su-text-muted); }
+
+/* ---------- FormSection (seção rotulada de formulário longo) ---------- */
+.su-form-section { padding: var(--su-space-5) 0; border-top: 1px solid var(--su-border-subtle); }
+.su-form-section:first-child { border-top: none; padding-top: 0; }
+.su-form-section__title { font-size: 13px; font-weight: var(--su-fw-semibold); color: var(--su-text-secondary); margin-bottom: var(--su-space-4); }
+.su-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--su-space-4); }
+.su-form-grid--full { grid-column: 1 / -1; }
+.su-form-actions { display: flex; justify-content: flex-end; gap: var(--su-space-2); padding: var(--su-space-4) 0 0; }
 

@@ -12,6 +12,25 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [1.0.3] — 2026-07-15 — Mobile + PhoneInput + Wizard de cadastro + correções · Mobile + PhoneInput + registration Wizard + fixes
+
+### Adicionado · Added
+- **Fase 4 (Mobile) iniciada:** `packages/mobile/mobile.css` — produto irmão (P4): Top Bar, Bottom Navigation (ação central), Cards, list items tocáveis ≥44px, chips, bottom sheet, indicador offline. `examples/mobile-clientes.html` — Clientes em versão mobile (lista + bottom nav + filtro em sheet).
+- **`PhoneInput`** implementado em `components.css` (E.164, seletor de país) — antes só especificado no catálogo.
+- **`FormSection` / `su-form-grid` / `su-form-actions`** para formulários longos multi-coluna.
+- **`examples/clientes.html`** — CRUD completo: DataTable interativa (seleção em lote + menu de linha) + **cadastro em etapas (Wizard/Stepper)** como tela dedicada, com PhoneInput.
+
+### Corrigido · Fixed
+- **`.su-tab` (Tabs) e `.su-segment` (SegmentedControl):** `appearance:none` — não renderizam mais como "botão nativo" do SO (casca de borda). Correção na raiz, vale para todo consumidor.
+- **`.su-m-navitem` (Bottom Navigation):** reset de botão blindado (sem caixa nativa).
+- **List item mobile:** nome trunca com reticências; valor + status empilhados à direita (evita quebra em telas estreitas).
+- **Padrão de cadastro Desktop:** trocado o Drawer estreito (padrão curto/mobile) por **tela dedicada** — como manda o CRUD Desktop para entidade com muitos campos.
+
+### Nota · Note
+- **CPF/CEP são localização BR** (responsabilidade do produto consumidor, não do DS); no exemplo usam `TextInput` comum. O **telefone** usa o componente oficial `PhoneInput`.
+
+---
+
 ## [1.0.2] — 2026-07-15 — Componentes especializados + exemplo · Specialized components + example
 
 - ✅ `packages/components/components.css` — **grupo 3 (especializados):** Combobox, DatePicker/Calendar, FileUpload, Drawer/Sheet, Accordion, Stepper/Wizard, DescriptionList, ProgressBar, Timeline, CommandPalette, SegmentedControl, Divider.

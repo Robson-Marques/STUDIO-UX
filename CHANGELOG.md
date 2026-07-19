@@ -12,6 +12,13 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [1.0.8] — 2026-07-15 — Adapter Mobile nativo (React Native) · Native Mobile adapter (React Native)
+
+- ✅ `packages/react-native/` — adapter Mobile **irmão** do web (P4): `theme.jsx` (tokens `v1.0.0` em JS, claro/escuro via `useColorScheme`, accent por tenant), `Button`/`Cta`, `Badge`/`Card`/`Stat`/`Chip`/`Divider`, `Field`/`Input`, `TopBar`/`ListItem`/`BottomNav`, `Sheet`/`StepBar` + `index.js` + `README` + `package.json` (`@studio-ux/react-native`).
+- **Regra:** mesmos VALORES de token, primitivas nativas próprias (`View`/`Text`/`Pressable`) — não reutiliza classes `.su-*` nem o layout web. Ícones via `renderIcon` (produto). Runtime descartável (`RUNTIME`).
+
+---
+
 ## [1.0.7] — 2026-07-15 — Playground (catálogo vivo) · Playground (live catalog)
 
 - ✅ `playground/index.html` — catálogo vivo navegável: todos os componentes por categoria (Fundamentais, Formulário, Dados, Navegação, Overlays, Feedback), em seus estados, com **troca de tema (claro/escuro)** e **seletor de cor de ação ao vivo** (7 acentos) — prova o eixo de marca do `THEMES` reapontando `--su-action` e a interface inteira acompanhando.

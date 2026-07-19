@@ -5,6 +5,10 @@
   "type": "module",
   "main": "index.js",
   "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./mobile": "./mobile.js"
+  },
   "sideEffects": false,
   "peerDependencies": {
     "react": ">=17",
@@ -12,6 +16,7 @@
   },
   "peerDependenciesMeta": {
     "@studio-ux/tokens": { "optional": false },
-    "@studio-ux/components": { "optional": false }
+    "@studio-ux/components": { "optional": false },
+    "@studio-ux/mobile": { "optional": true }
   }
 }

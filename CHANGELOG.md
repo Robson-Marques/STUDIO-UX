@@ -12,6 +12,15 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [1.0.10] — 2026-07-19 — Adapter React para mobile-web (`@studio-ux/react/mobile`) · React adapter for mobile-web
+
+- ✅ Novo subpath **`@studio-ux/react/mobile`** (`packages/react/mobile/`): wrappers React sobre as classes `.su-m-*` do `mobile.css`, para PWA/mobile-web em React. Irmão do adapter Desktop (P4) — não é o desktop "responsivo".
+- **Componentes (~25):** `TopBar`, `Greeting`, `SearchBar`, `BottomNav` (+FAB), `Footer`, `Cta`; `Card`, `List`, `ListItem`, `Stat`, `Chips`/`Chip`; `DetailHeader`, `MobileTabs`, `QuickActions`/`QuickAction`; `OfflineBanner`, `SyncBanner`, `Banner`, `Notification`, `StepBar`; `Field`, `Input`, `PhoneInput`, `Sheet`; `SwipeableRow` (touch, com alternativa — P19), `ScannerFrame` (câmera é do produto).
+- `mobile.css`: adicionadas classes token-based que os mockups faziam via inline — `.su-m-sheet-backdrop`, `.su-m-detail-head__body`/`__meta`, `.su-m-notif__body` e variantes de tom `.su-m-notif__icon--{success,warning,danger,info}` (paridade com o adapter RN; aditivo, não-quebra).
+- `packages/react/package.json`: `exports` com subpath `./mobile`.
+
+---
+
 ## [1.0.9] — 2026-07-15 — Adapter React Native — paridade com o mobile · RN adapter — mobile parity
 
 - ✅ `packages/react-native/` completado até a paridade com `mobile.css`: `Greeting`, `SearchBar`, `PhoneInput` (E.164), `MobileTabs`, `QuickActions`/`QuickAction`, `DetailHeader`, `OfflineBanner`/`SyncBanner`/`Banner`, `Notification`, `SwipeableRow` (gesto via PanResponder, com alternativa — P19), `ScannerFrame` (câmera é do produto), `Footer`. Barrel `index.js` atualizado (~29 componentes).

@@ -12,6 +12,13 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [1.0.9] — 2026-07-15 — Adapter React Native — paridade com o mobile · RN adapter — mobile parity
+
+- ✅ `packages/react-native/` completado até a paridade com `mobile.css`: `Greeting`, `SearchBar`, `PhoneInput` (E.164), `MobileTabs`, `QuickActions`/`QuickAction`, `DetailHeader`, `OfflineBanner`/`SyncBanner`/`Banner`, `Notification`, `SwipeableRow` (gesto via PanResponder, com alternativa — P19), `ScannerFrame` (câmera é do produto), `Footer`. Barrel `index.js` atualizado (~29 componentes).
+- **Regra mantida:** primitivas nativas, mesmos valores de token; ícones e câmera vêm do produto (`renderIcon`/`camera`); gesto sempre com alternativa.
+
+---
+
 ## [1.0.8] — 2026-07-15 — Adapter Mobile nativo (React Native) · Native Mobile adapter (React Native)
 
 - ✅ `packages/react-native/` — adapter Mobile **irmão** do web (P4): `theme.jsx` (tokens `v1.0.0` em JS, claro/escuro via `useColorScheme`, accent por tenant), `Button`/`Cta`, `Badge`/`Card`/`Stat`/`Chip`/`Divider`, `Field`/`Input`, `TopBar`/`ListItem`/`BottomNav`, `Sheet`/`StepBar` + `index.js` + `README` + `package.json` (`@studio-ux/react-native`).

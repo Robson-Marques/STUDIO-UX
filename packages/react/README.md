@@ -1,4 +1,4 @@
-# @studio-ux/react — Camada React · React layer
+# @studio-ux-ds/react — Camada React · React layer
 
 > **PT** — Adapter React sobre o Studio UX. Estes componentes **não reimplementam** nada: eles apenas embrulham as classes `.su-*` de `packages/components/components.css` (e os tokens de `packages/tokens/tokens.css`) numa API de props. Por `STUDIO_UX_RUNTIME.md`, esta camada é um **runtime descartável** — a Specification (tokens + regras) é a fonte da verdade; se um produto usar Vue, Flutter ou HTML puro, troca-se o adapter, não o design system.
 >
@@ -7,9 +7,9 @@
 ## Como usar · Usage
 
 ```jsx
-import "@studio-ux/tokens/tokens.css";
-import "@studio-ux/components/components.css";
-import { Button, Badge, Card, Field, Tabs, Modal, ConfirmDialog, ToastProvider, useToast, DataTable } from "@studio-ux/react";
+import "@studio-ux-ds/tokens/tokens.css";
+import "@studio-ux-ds/components/components.css";
+import { Button, Badge, Card, Field, Tabs, Modal, ConfirmDialog, ToastProvider, useToast, DataTable } from "@studio-ux-ds/react";
 
 function Exemplo() {
   return (

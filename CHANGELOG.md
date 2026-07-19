@@ -12,6 +12,16 @@ Nada pendente. / Nothing pending.
 
 ---
 
+## [1.0.15] — 2026-07-19 — Publicação no GitHub Packages (org `studio-ux-ds`) · Publish to GitHub Packages
+
+- ✅ Registry definido: **GitHub Packages**, org **`studio-ux-ds`** (`studio-ux` e `studioux` estavam tomados). Escopo renomeado para **`@studio-ux-ds`** em todos os pacotes/docs/scripts (casa com o dono do repositório). Os 5 `package.json` ganharam `publishConfig.registry: https://npm.pkg.github.com` e `repository.url` da org `github.com/studio-ux-ds/studio-ux`.
+- ✅ `.github/workflows/publish.yml` — **publica automaticamente os 5 pacotes ao empurrar uma tag `v*`**, usando o `GITHUB_TOKEN` embutido (sem token manual). Roda `check-packages.mjs` antes de publicar.
+- ✅ `.npmrc.example` reescrito para o GitHub Packages (publicar = `write:packages`; consumir = `read:packages`; CI não precisa de token).
+- ✅ `STUDIO_UX_PUBLISHING.md` atualizado: preparação da org/repo, publicação por tag (automática) e manual, e como os produtos consomem via `.npmrc`.
+- Versões em lockstep na 1.0.15.
+
+---
+
 ## [1.0.14] — 2026-07-19 — Empacotamento: monorepo npm workspaces publicável · Packaging: publishable npm workspaces monorepo
 
 - ✅ `package.json` na raiz (**privado**, nunca publicado) com `workspaces` dos 5 pacotes; versionamento **em lockstep**.

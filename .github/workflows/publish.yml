@@ -1,0 +1,35 @@
+name: Publicar pacotes (GitHub Packages)
+
+# Publica os 5 pacotes @studio-ux-ds/* no GitHub Packages sempre que uma tag vX.Y.Z
+# é empurrada — encaixa no fluxo de release por tag (VERSIONING). Sem token manual:
+# usa o GITHUB_TOKEN embutido do Actions.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node + registry do GitHub Packages
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@studio-ux-ds"
+
+      - name: Verificação dos pacotes (campos, files, lockstep, fronteira P4)
+        run: node scripts/check-packages.mjs
+
+      - name: Publicar todos os workspaces
+        run: npm publish --workspaces --access restricted
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

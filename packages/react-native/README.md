@@ -1,13 +1,13 @@
-# @studio-ux/react-native — Adapter Mobile nativo · Native Mobile adapter
+# @studio-ux-ds/react-native — Adapter Mobile nativo · Native Mobile adapter
 
-> **PT** — O **irmão** do adapter web (`@studio-ux/react`), para React Native. Por P4 (Art. 2), Mobile é um produto **projetado do zero**: não reutiliza o layout do web nem as classes `.su-*` (RN não tem CSS/DOM). O que ele **compartilha** é a fonte da verdade — os **valores de token congelados na `v1.0.0`** —, aqui entregues como um tema JS (`theme.jsx`). A implementação usa primitivas nativas (`View`/`Text`/`Pressable`/`TextInput`/`Modal`).
+> **PT** — O **irmão** do adapter web (`@studio-ux-ds/react`), para React Native. Por P4 (Art. 2), Mobile é um produto **projetado do zero**: não reutiliza o layout do web nem as classes `.su-*` (RN não tem CSS/DOM). O que ele **compartilha** é a fonte da verdade — os **valores de token congelados na `v1.0.0`** —, aqui entregues como um tema JS (`theme.jsx`). A implementação usa primitivas nativas (`View`/`Text`/`Pressable`/`TextInput`/`Modal`).
 >
-> **EN** — The **sibling** of the web adapter (`@studio-ux/react`), for React Native. Per P4, Mobile is a product **designed from scratch**: it reuses neither the web layout nor the `.su-*` classes (RN has no CSS/DOM). What it **shares** is the source of truth — the **token values frozen in `v1.0.0`** — delivered here as a JS theme (`theme.jsx`). It's implemented with native primitives.
+> **EN** — The **sibling** of the web adapter (`@studio-ux-ds/react`), for React Native. Per P4, Mobile is a product **designed from scratch**: it reuses neither the web layout nor the `.su-*` classes (RN has no CSS/DOM). What it **shares** is the source of truth — the **token values frozen in `v1.0.0`** — delivered here as a JS theme (`theme.jsx`). It's implemented with native primitives.
 
 ## Uso · Usage
 
 ```jsx
-import { ThemeProvider, TopBar, ListItem, BottomNav, Badge, Cta, Sheet, StepBar, Field, Input } from "@studio-ux/react-native";
+import { ThemeProvider, TopBar, ListItem, BottomNav, Badge, Cta, Sheet, StepBar, Field, Input } from "@studio-ux-ds/react-native";
 
 export default function App() {
   return (

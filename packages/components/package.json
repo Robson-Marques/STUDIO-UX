@@ -1,7 +1,7 @@
 {
-  "name": "@studio-ux/components",
-  "version": "1.0.14",
-  "description": "Componentes Desktop do Studio UX em CSS puro (classes .su-*), sobre @studio-ux/tokens.",
+  "name": "@studio-ux-ds/components",
+  "version": "1.0.15",
+  "description": "Componentes Desktop do Studio UX em CSS puro (classes .su-*), sobre @studio-ux-ds/tokens.",
   "exports": {
     "./components.css": "./components.css"
   },
@@ -14,14 +14,15 @@
   "author": "Robson Marques <robson.marques.jr@gmail.com>",
   "license": "UNLICENSED",
   "publishConfig": {
-    "access": "restricted"
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Robson-Marques/studio-ux.git",
+    "url": "https://github.com/studio-ux-ds/studio-ux.git",
     "directory": "packages/components"
   },
   "peerDependencies": {
-    "@studio-ux/tokens": "^1.0.0"
+    "@studio-ux-ds/tokens": "^1.0.0"
   }
 }

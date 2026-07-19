@@ -1,14 +1,12 @@
-# Studio UX — exemplo de .npmrc. Copie para `.npmrc` (que é git-ignored) e ajuste.
-# Escolha UM registry para o escopo @studio-ux e autentique.
+# Studio UX — exemplo de .npmrc. Copie para `.npmrc` (que é git-ignored).
+# Registry escolhido: GitHub Packages, org `studio-ux-ds`.
 
-# Opção A — GitHub Packages (token com write:packages):
-# @studio-ux:registry=https://npm.pkg.github.com
-# //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+# Aponta o escopo @studio-ux-ds para o GitHub Packages:
+@studio-ux-ds:registry=https://npm.pkg.github.com
 
-# Opção B — npm privado (org paga):
-# @studio-ux:registry=https://registry.npmjs.org
-# (rode `npm login` em vez de gravar token aqui)
+# Autenticação (NÃO commitar o token — por isso .npmrc é ignorado):
+# - Para PUBLICAR (na org): token (classic) com escopo `write:packages`.
+# - Para CONSUMIR nos produtos: token com escopo `read:packages`.
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 
-# Opção C — registry interno (Verdaccio/Artifactory):
-# @studio-ux:registry=https://npm.suaempresa.com
-# //npm.suaempresa.com/:_authToken=${NPM_TOKEN}
+# No CI (Actions) nada disso é necessário: o workflow usa o GITHUB_TOKEN embutido.

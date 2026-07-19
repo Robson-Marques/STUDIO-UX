@@ -1,16 +1,16 @@
-# @studio-ux/react/mobile — adapter React para mobile-web (PWA)
+# @studio-ux-ds/react/mobile — adapter React para mobile-web (PWA)
 
-Wrappers React finos sobre as classes `.su-m-*` do `@studio-ux/mobile` (mobile.css).
-É o **irmão mobile-web** do adapter Desktop (`@studio-ux/react`) — não é o desktop
+Wrappers React finos sobre as classes `.su-m-*` do `@studio-ux-ds/mobile` (mobile.css).
+É o **irmão mobile-web** do adapter Desktop (`@studio-ux-ds/react`) — não é o desktop
 "responsivo". Serve produtos que fazem app mobile na web em React (ex.: PWA do
 garçom do Delivery). Segue o Princípio **P4** (Desktop ≠ Mobile: dois produtos).
 
 ## Uso
 
 ```jsx
-import "@studio-ux/tokens/tokens.css";
-import "@studio-ux/mobile/mobile.css";
-import { TopBar, BottomNav, ListItem, Cta } from "@studio-ux/react/mobile";
+import "@studio-ux-ds/tokens/tokens.css";
+import "@studio-ux-ds/mobile/mobile.css";
+import { TopBar, BottomNav, ListItem, Cta } from "@studio-ux-ds/react/mobile";
 ```
 
 ## Regras (iguais ao adapter Desktop)

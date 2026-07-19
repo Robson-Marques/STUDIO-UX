@@ -1,4 +1,4 @@
-// @studio-ux/react-native — adapter Mobile nativo. IRMÃO do adapter web (P4):
+// @studio-ux-ds/react-native — adapter Mobile nativo. IRMÃO do adapter web (P4):
 // mesmos VALORES de token, primitivas próprias (View/Text/Pressable), layout próprio.
 export { ThemeProvider, useTheme, palette, space, radius, fontSize, fontWeight } from "./theme.jsx";
 export { Button, Cta } from "./Button.jsx";

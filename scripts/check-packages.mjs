@@ -49,7 +49,7 @@ for (const file of scan(reactDir).filter((f) => /\.jsx?$/.test(f))) {
 }
 for (const file of scan(rnDir).filter((f) => /\.jsx?$/.test(f))) {
   const src = readFileSync(file, "utf8");
-  if (/@studio-ux\/react[^-]/.test(src)) fail(`${file}: adapter nativo importa o adapter web (viola P4)`);
+  if (/@studio-ux-ds\/react[^-]/.test(src)) fail(`${file}: adapter nativo importa o adapter web (viola P4)`);
 }
 
 console.log(errors ? `\n${errors} problema(s).` : "\nTudo certo — pacotes prontos para empacotar.");

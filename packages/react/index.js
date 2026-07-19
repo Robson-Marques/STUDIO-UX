@@ -1,4 +1,4 @@
-// @studio-ux/react — barrel. Cada componente num arquivo (tree-shakeable).
+// @studio-ux-ds/react — barrel. Cada componente num arquivo (tree-shakeable).
 // Adapter de runtime sobre packages/components/components.css + packages/tokens/tokens.css.
 
 // Fundamentais

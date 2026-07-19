@@ -1,7 +1,7 @@
 {
-  "name": "@studio-ux/mobile",
-  "version": "1.0.14",
-  "description": "Produto Mobile do Studio UX em CSS puro (classes .su-m-*), sobre @studio-ux/tokens. Irmão do Desktop (P4).",
+  "name": "@studio-ux-ds/mobile",
+  "version": "1.0.15",
+  "description": "Produto Mobile do Studio UX em CSS puro (classes .su-m-*), sobre @studio-ux-ds/tokens. Irmão do Desktop (P4).",
   "exports": {
     "./mobile.css": "./mobile.css"
   },
@@ -14,14 +14,15 @@
   "author": "Robson Marques <robson.marques.jr@gmail.com>",
   "license": "UNLICENSED",
   "publishConfig": {
-    "access": "restricted"
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Robson-Marques/studio-ux.git",
+    "url": "https://github.com/studio-ux-ds/studio-ux.git",
     "directory": "packages/mobile"
   },
   "peerDependencies": {
-    "@studio-ux/tokens": "^1.0.0"
+    "@studio-ux-ds/tokens": "^1.0.0"
   }
 }
